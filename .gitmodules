@@ -1,0 +1,3 @@
+[submodule "AndroidUtils"]
+	path = AndroidUtils
+	url = git@git.oschina.net:oldfeel/AndroidUtils.git
