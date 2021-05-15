@@ -8,6 +8,8 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/AndroidUtils/AndroidUtils" />
+            <option value="$PROJECT_DIR$/AndroidUtils/multi-image-selector" />
             <option value="$PROJECT_DIR$/app" />
           </set>
         </option>

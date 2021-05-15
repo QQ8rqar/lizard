@@ -1,1 +1,4 @@
 include ':app'
+include ':AndroidUtils', ":multi-image-selector"
+project(':AndroidUtils').projectDir = new File('AndroidUtils/AndroidUtils')
+project(':multi-image-selector').projectDir = new File('AndroidUtils/multi-image-selector')

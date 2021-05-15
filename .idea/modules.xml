@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/AndroidUtils/AndroidUtils/AndroidUtils.iml" filepath="$PROJECT_DIR$/AndroidUtils/AndroidUtils/AndroidUtils.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/lizard.iml" filepath="$PROJECT_DIR$/lizard.iml" />
+      <module fileurl="file://$PROJECT_DIR$/AndroidUtils/multi-image-selector/multi-image-selector.iml" filepath="$PROJECT_DIR$/AndroidUtils/multi-image-selector/multi-image-selector.iml" />
     </modules>
   </component>
 </project>
