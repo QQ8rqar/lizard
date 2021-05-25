@@ -1,13 +1,17 @@
 package com.yuncommunity.lizard;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class MainActivity extends AppCompatActivity {
+import com.pgyersdk.update.PgyUpdateManager;
+import com.yuncommunity.lizard.base.MyActivity;
+
+public class MainActivity extends MyActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        PgyUpdateManager.register(this);
     }
 }
