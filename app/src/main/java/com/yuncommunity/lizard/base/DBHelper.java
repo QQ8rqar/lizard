@@ -4,6 +4,7 @@ import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 
 import com.j256.ormlite.android.apptools.OrmLiteSqliteOpenHelper;
+import com.j256.ormlite.dao.Dao;
 import com.j256.ormlite.support.ConnectionSource;
 import com.j256.ormlite.table.TableUtils;
 import com.yuncommunity.lizard.conf.Constant;
@@ -18,10 +19,16 @@ import java.sql.SQLException;
 public class DBHelper extends OrmLiteSqliteOpenHelper {
     private static DBHelper dbHelper;
     private Context context;
+    private Dao<RecordItem, Integer> recordDao;
 
     public static DBHelper getInstance(Context context) {
         if (dbHelper == null) {
             dbHelper = new DBHelper(context);
+            try {
+                dbHelper.recordDao = dbHelper.getDao(RecordItem.class);
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
         }
         return dbHelper;
     }
@@ -48,5 +55,13 @@ public class DBHelper extends OrmLiteSqliteOpenHelper {
             e.printStackTrace();
         }
         onCreate(database, connectionSource);
+    }
+
+    public void createOrUpdate(RecordItem item) {
+        try {
+            recordDao.createOrUpdate(item);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 }

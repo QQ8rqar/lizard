@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="peeling_components">
+        <item>头部</item>
+        <item>背部</item>
+        <item>前腿</item>
+        <item>后腿</item>
+        <item>吼扇</item>
+        <item>肚子</item>
+        <item>尾巴</item>
+    </string-array>
+    <string-array name="sexs">
+        <item>雌</item>
+        <item>雄</item>
+        <item>未知</item>
+    </string-array>
+</resources>

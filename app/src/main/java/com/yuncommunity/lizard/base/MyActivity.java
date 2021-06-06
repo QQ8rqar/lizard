@@ -1,5 +1,6 @@
 package com.yuncommunity.lizard.base;
 
+import android.os.Bundle;
 import android.support.annotation.NonNull;
 
 import com.oldfeel.base.BaseActivity;
@@ -13,6 +14,13 @@ import easypermissions.EasyPermissions;
  */
 
 public class MyActivity extends BaseActivity implements EasyPermissions.PermissionCallbacks {
+    public DBHelper dbHelper;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        dbHelper = DBHelper.getInstance(this);
+    }
 
     @Override
     public void onPermissionsGranted(List<String> perms) {

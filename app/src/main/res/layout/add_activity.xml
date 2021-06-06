@@ -1,7 +1,93 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:fitsSystemWindows="true">
 
-</LinearLayout>
+    <include layout="@layout/toolbar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="8dp"
+            android:text="提示:体重和体长的记录时间为脱皮开始时间" />
+
+        <LinearLayout style="@style/single_ll">
+
+            <TextView
+                style="@style/form_left_width_80"
+                android:text="体重:" />
+
+            <EditText
+                android:id="@+id/weight"
+                style="@style/add_activity_form_right"
+                android:hint="单位(g)"
+                android:inputType="numberDecimal" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/single_ll">
+
+            <TextView
+                style="@style/form_left_width_80"
+                android:text="体长:" />
+
+            <EditText
+                android:id="@+id/length"
+                style="@style/add_activity_form_right"
+                android:hint="单位(cm)"
+                android:inputType="numberDecimal" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/single_ll">
+
+            <TextView
+                style="@style/form_left_width_80"
+                android:text="脱皮部位:" />
+
+            <Spinner
+                android:id="@+id/peeling_component"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/height_default"
+                android:layout_weight="1.0"
+                android:entries="@array/peeling_components" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/single_ll">
+
+            <TextView
+                style="@style/form_left_width_80"
+                android:text="脱皮开始:" />
+
+            <TextView
+                android:id="@+id/start_time"
+                style="@style/add_activity_form_right"
+                android:hint="日期" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/single_ll">
+
+            <TextView
+                style="@style/form_left_width_80"
+                android:text="脱皮结束:" />
+
+            <TextView
+                android:id="@+id/stop_time"
+                style="@style/add_activity_form_right"
+                android:hint="日期" />
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/images"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+</android.support.design.widget.CoordinatorLayout>

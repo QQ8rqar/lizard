@@ -13,4 +13,8 @@
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
+    <style name="add_activity_form_right" parent="form_right_et">
+        <item name="android:paddingLeft">8dp</item>
+    </style>
+
 </resources>
