@@ -24,6 +24,25 @@
 
             <TextView
                 style="@style/form_left_width_80"
+                android:text="蜥蜴:" />
+
+            <Spinner
+                android:id="@+id/lizard"
+                style="@style/form_right_et" />
+
+            <ImageButton
+                android:id="@+id/lizard_add"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent"
+                android:padding="6dp"
+                android:src="@android:drawable/ic_input_add" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/single_ll">
+
+            <TextView
+                style="@style/form_left_width_80"
                 android:text="体重:" />
 
             <EditText
@@ -54,9 +73,7 @@
 
             <Spinner
                 android:id="@+id/peeling_component"
-                android:layout_width="wrap_content"
-                android:layout_height="@dimen/height_default"
-                android:layout_weight="1.0"
+                style="@style/form_right_et"
                 android:entries="@array/peeling_components" />
         </LinearLayout>
 

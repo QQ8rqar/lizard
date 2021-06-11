@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout style="@style/single_ll">
+
+        <TextView
+            style="@style/form_left_width_80"
+            android:text="姓名:" />
+
+        <EditText
+            android:id="@+id/name"
+            style="@style/add_activity_form_right"
+            android:hint="一西" />
+    </LinearLayout>
+
+    <LinearLayout style="@style/single_ll">
+
+        <TextView
+            style="@style/form_left_width_80"
+            android:text="性别:" />
+
+        <Spinner
+            android:id="@+id/sex"
+            style="@style/form_right_et"
+            android:entries="@array/sexs" />
+    </LinearLayout>
+
+    <LinearLayout style="@style/single_ll">
+
+        <TextView
+            style="@style/form_left_width_80"
+            android:text="生日:" />
+
+        <TextView
+            android:id="@+id/birthday"
+            style="@style/add_activity_form_right"
+            android:hint="日期"
+            android:inputType="numberDecimal" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="取消" />
+
+        <Button
+            android:id="@+id/submit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="确定" />
+    </LinearLayout>
+</LinearLayout>

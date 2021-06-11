@@ -34,6 +34,7 @@
         </activity>
         <activity android:name=".AddActivity" />
         <activity android:name=".ChartActivity" />
+        <activity android:name="com.oldfeel.base.LookBigImage" />
 
         <meta-data
             android:name="PGYER_APPID"

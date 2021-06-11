@@ -9,9 +9,12 @@ import com.oldfeel.base.BaseItem;
  */
 @DatabaseTable
 public class LizardItem extends BaseItem {
-    @DatabaseField(id = true)
+    @DatabaseField(generatedId = true)
     public int id;
+    @DatabaseField
     public String name;
+    @DatabaseField
     public String birthday;
+    @DatabaseField
     public String sex;
 }

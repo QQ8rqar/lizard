@@ -3,6 +3,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.yuncommunity.lizard.MainActivity">
     <item
+        android:id="@+id/action_lizard"
+        android:orderInCategory="100"
+        android:title="蜥蜴"
+        app:actionLayout="@layout/menu_spinner"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/action_peeling"
+        android:orderInCategory="100"
+        android:title="脱皮部件"
+        app:actionLayout="@layout/menu_spinner"
+        app:showAsAction="always" />
+    <item
         android:id="@+id/action_chart"
         android:orderInCategory="100"
         android:title="图表"
