@@ -12,6 +12,7 @@ import android.widget.AdapterView;
 import android.widget.Spinner;
 import android.widget.TextView;
 
+import com.baidu.mobstat.StatService;
 import com.oldfeel.base.BaseBaseAdapter;
 import com.oldfeel.utils.LogUtil;
 import com.pgyersdk.update.PgyUpdateManager;
@@ -43,6 +44,7 @@ public class MainActivity extends MyActivity {
                 .commit();
 
         PgyUpdateManager.register(this);
+        StatService.start(this);
     }
 
     @OnClick(R.id.fab)
